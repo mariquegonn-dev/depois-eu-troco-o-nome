@@ -37,23 +37,18 @@ export const NavMobile = () => {
             className="cursor-pointer"
           />
         ) : (
-          <X
-            aria-label="button-close"
-            size={24}
-            className="cursor-pointer"
-            onClick={() => setOpen(false)}
-          />
+          <X size={16} className="text-secundary-gray" weight="bold" />
         )}
       </div>
 
       <nav
         className={cn(
-          "content absolute left-14 rounded-l-xl right-0 top-0 z-[10000] h-[100svh] translate-x-[200%] bg-tertiary-black opacity-0 transition-all duration-500 border-l border-primary-gray",
+          "content absolute left-14 rounded-l-xl right-0 top-0 z-[10000] translate-x-[200%] bg-tertiary-black opacity-0 transition-all duration-500 border-l border-primary-gray",
           open && "translate-x-0 opacity-100"
         )}
       >
         {open && (
-          <div className="p-4 flex flex-col gap-3 h-full">
+          <div className="p-4 flex flex-col gap-3 h-[100dvh]">
             <div className="flex items-center justify-between">
               <div className="flex gap-2 items-center">
                 <Image
