@@ -25,6 +25,7 @@ const config = {
         "primary-gray": "#30363D",
         "secundary-gray": "#8B96A0",
         "primary-white": "#E6EDF3",
+        "primary-purple": "#9B30F9",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

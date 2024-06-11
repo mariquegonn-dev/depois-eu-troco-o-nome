@@ -1,16 +1,27 @@
 "use client"
 
-import { navConfig } from "@/config/nav.config"
-import Link from "next/link"
-import { IconTooltip } from "./icon-tooltip"
 import { useEffect, useState } from "react"
 import { List, X } from "@phosphor-icons/react/dist/ssr"
 import { cn } from "@/lib/utils"
-import Image from "next/image"
 import { socialsConfig } from "@/config/socials.config"
+import { useParams, usePathname } from "next/navigation"
+import { navConfig } from "@/config/nav.config"
+import { ListNav } from "../../ListNav/list"
+import { NavHeaderMobile } from "./nav-header-mobile"
 
 export const NavMobile = () => {
+  const [hash, setHash] = useState("")
   const [open, setOpen] = useState(false)
+  const params = useParams()
+  const pathname = usePathname()
+
+  useEffect(() => {
+    if (open) {
+      const getHash = window.location.hash
+      setHash(getHash)
+      setOpen(false)
+    }
+  }, [params, hash])
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -49,84 +60,25 @@ export const NavMobile = () => {
       >
         {open && (
           <div className="p-4 flex flex-col gap-3 h-[100dvh]">
-            <div className="flex items-center justify-between">
-              <div className="flex gap-2 items-center">
-                <Image
-                  className="w-8 h-8 object-cover rounded-full border-primary-gray border"
-                  width={32}
-                  height={32}
-                  alt="image profile"
-                  src="/profile.webp"
-                />
-                <div className="text-sm flex flex-col">
-                  <span className="text-primary-white font-medium">
-                    mariquegonn
-                  </span>
-                  <span className="text-secundary-gray">
-                    Henrique Gonçalves
-                  </span>
-                </div>
-              </div>
-
-              <div
-                className="flex justify-center items-center w-8 h-8 hover:bg-primary-gray/50 transition-colors duration-300 rounded-md cursor-pointer"
-                onClick={() => setOpen(false)}
-                aria-label="button-close"
-              >
-                <X size={16} className="text-secundary-gray" weight="bold" />
-              </div>
-            </div>
+            <NavHeaderMobile onClick={() => setOpen(false)} />
 
             <p className="px-2 text-primary-white text-sm border-b pb-3 border-primary-gray">
               👽 Apenas, busquem conhecimento.
             </p>
 
-            <ul
-              role="navigation"
-              aria-label="header-nav-mobile"
-              className="flex flex-col gap-2 border-b border-primary-gray pb-3"
-            >
-              {navConfig.map(({ href, title, Icon }) => (
-                <li key={title}>
-                  <Link
-                    title={title}
-                    href={href}
-                    className={cn(
-                      "flex items-center gap-2 w-full border-l-4 border-transparent py-[6px] px-2 text-primary-white/80 hover:bg-primary-gray/50 rounded-md text-sm"
-                    )}
-                  >
-                    <Icon size={18} className="" />
-                    {title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <ListNav
+              variant="nav"
+              config={navConfig}
+              onClick={() => {
+                if (pathname === "/") setOpen(false)
+              }}
+            />
 
-            <ul
-              role="navigation"
-              aria-label="header-nav-mobile"
-              className="flex flex-col gap-2 flex-1"
-            >
-              {socialsConfig.map(({ href, title, Icon }) => (
-                <li key={href}>
-                  <Link
-                    title={title}
-                    href={href}
-                    target="_blank"
-                    className={cn(
-                      "flex items-center gap-2 w-full border-l-4 border-transparent py-[6px] px-2 text-primary-white/80 hover:bg-primary-gray/50 rounded-md text-sm"
-                    )}
-                  >
-                    <Icon size={18} />
-                    {title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <ListNav variant="socials" config={socialsConfig} target="_blank" />
 
-            <div className="text-center text-xs text-secundary-gray cursor-default">
+            <p className="text-center text-xs text-secundary-gray cursor-default">
               Frontend Developer
-            </div>
+            </p>
           </div>
         )}
       </nav>

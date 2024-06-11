@@ -1,11 +1,12 @@
-import { Socials } from "@/types/socials.type"
+import { Nav } from "@/types/nav.type"
+
 import {
   GithubLogo,
   LinkedinLogo,
   WhatsappLogo,
 } from "@phosphor-icons/react/dist/ssr"
 
-export const socialsConfig: Socials[] = [
+export const socialsConfig: Nav[] = [
   {
     title: "Github",
     href: "https://github.com/mariquegonn-dev",

@@ -1,6 +1,6 @@
-import { navConfig } from "@/config/nav.config"
 import Link from "next/link"
 import { IconTooltip } from "./icon-tooltip"
+import { navConfig } from "@/config/nav.config"
 
 export const Nav = () => {
   return (
@@ -9,7 +9,7 @@ export const Nav = () => {
         {navConfig.map(({ href, title, Icon }) => (
           <li key={title}>
             <Link href={href}>
-              <IconTooltip Icon={Icon} title={title} />
+              <IconTooltip Icon={Icon} title={title} href={href} />
             </Link>
           </li>
         ))}

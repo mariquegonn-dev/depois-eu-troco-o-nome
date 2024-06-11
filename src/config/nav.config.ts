@@ -1,30 +1,30 @@
-import { Nav } from '@/types/nav.type'
+import { Nav } from "@/types/nav.type"
 import {
   BookBookmark,
   BookOpen,
   House,
   WechatLogo,
-} from '@phosphor-icons/react/dist/ssr'
+} from "@phosphor-icons/react/dist/ssr"
 
 export const navConfig: Nav[] = [
   {
-    title: 'Início',
-    href: '/',
+    title: "Início",
+    href: "/",
     Icon: House,
   },
   {
-    title: 'Sobre',
-    href: '#about',
+    title: "Sobre",
+    href: "/#about",
     Icon: BookOpen,
   },
   {
-    title: 'Repositórios',
-    href: '/repositories',
+    title: "Repositórios",
+    href: "/repositories",
     Icon: BookBookmark,
   },
   {
-    title: 'Contato',
-    href: '/contact',
+    title: "Contato",
+    href: "/contact",
     Icon: WechatLogo,
   },
 ]
