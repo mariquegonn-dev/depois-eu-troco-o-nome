@@ -8,6 +8,7 @@ import {
 import Image from "next/image"
 import Link from "next/link"
 import { SkillsSideBar } from "./(components)/skills-side-bar"
+import { Separator } from "../Separator/separator"
 
 const infoSideBarConfig = [
   { Icon: MapPin, title: "Aracaju/SE - Brazil" },
@@ -35,26 +36,27 @@ const infoSideBarConfig = [
 
 export const SideBar = () => {
   return (
-    <div className="flex flex-col gap-5 max-w-72">
-      <Image
-        className="w-72 h-72 rounded-full border-2 border-primary-gray"
-        src="/profile.webp"
-        width={318}
-        height={333.12}
-        alt="profile-image"
-      />
+    <div className="flex flex-col gap-5 md:max-w-72">
+      <div className="flex flex-row md:flex-col gap-5 items-center md:items-start">
+        <Image
+          className="md:w-72 md:h-72 w-32 h-32 rounded-full border-2 border-primary-gray"
+          src="/profile.webp"
+          width={318}
+          height={333.12}
+          alt="profile-image"
+        />
 
-      <div className="flex flex-col gap-5">
         <h1 className="text-2xl font-semibold text-primary-white flex flex-col">
           Henrique Gonçalves
           <span className="text-xl text-secundary-gray lowercase font-light">
             MariqueGonn
           </span>
         </h1>
-        <p className="text-base text-primary-white font-light">
-          Frontend Developer
-        </p>
       </div>
+
+      <p className="text-base text-primary-white font-light">
+        Frontend Developer
+      </p>
 
       <ul className="flex flex-col gap-2">
         {infoSideBarConfig.map(({ Icon, title, href }) => (
@@ -75,11 +77,11 @@ export const SideBar = () => {
         ))}
       </ul>
 
-      <span className="w-full h-[1px] bg-primary-gray"></span>
+      <Separator />
 
       <SkillsSideBar />
 
-      <span className="w-full h-[1px] bg-primary-gray"></span>
+      <Separator />
 
       <div className="flex flex-col gap-5">
         <h1 className="font-medium capitalize">Organização Atual</h1>

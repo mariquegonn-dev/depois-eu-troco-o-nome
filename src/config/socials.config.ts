@@ -1,6 +1,7 @@
 import { Nav } from "@/types/nav.type"
 
 import {
+  Envelope,
   GithubLogo,
   LinkedinLogo,
   WhatsappLogo,
@@ -21,5 +22,10 @@ export const socialsConfig: Nav[] = [
     title: "Whatsapp",
     href: "https://wa.me/5579999199036?text=Ol%C3%A1+Henrique%21",
     Icon: WhatsappLogo,
+  },
+  {
+    title: "Email",
+    href: "mailto:mariquegonn@gmail.com",
+    Icon: Envelope,
   },
 ]

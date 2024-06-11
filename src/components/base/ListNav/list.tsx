@@ -3,7 +3,7 @@ import { Nav } from "@/types/nav.type"
 import Link from "next/link"
 
 type ListProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  variant?: "nav" | "socials"
+  variant?: "nav" | "socials" | "main"
   config: Nav[]
 }
 
@@ -11,11 +11,12 @@ export const ListNav = ({ config, variant = "nav", ...props }: ListProps) => {
   return (
     <ul
       role="navigation"
-      aria-label={variant === "nav" ? "main-nav-bar" : "nav-socials"}
+      aria-label={`${variant}-nav-list`}
       className={cn(
-        "flex flex-col gap-2",
-        variant === "nav" && "border-b border-primary-gray pb-3",
-        variant === "socials" && "flex-1"
+        "flex gap-2",
+        variant === "nav" && "border-b border-primary-gray pb-3 flex-col",
+        variant === "socials" && "flex-1 flex-col",
+        variant === "main" && ""
       )}
     >
       {config.map(({ href, title, Icon }) => (
@@ -25,11 +26,13 @@ export const ListNav = ({ config, variant = "nav", ...props }: ListProps) => {
             title={title}
             href={href}
             className={cn(
-              "flex items-center gap-2 w-full border-l-4 border-transparent py-[6px] px-2 text-primary-white/80 hover:bg-primary-gray/50 rounded-md text-sm"
+              "flex items-center gap-2 w-full py-[6px] px-2 text-primary-white/80 hover:bg-primary-gray/50 rounded-md text-sm",
+              variant === "main" &&
+                "border border-primary-gray hover:border-primary-gray/50"
             )}
           >
-            <Icon size={18} />
-            {title}
+            <Icon size={variant === "main" ? 24 : 18} />
+            {variant !== "main" && title}
           </Link>
         </li>
       ))}

@@ -52,6 +52,9 @@ export const NavMobile = () => {
         )}
       </div>
 
+      {open && (
+        <div className="fixed inset-0 z-[1000] bg-black opacity-50"></div>
+      )}
       <nav
         className={cn(
           "content absolute left-14 rounded-l-xl right-0 top-0 z-[10000] translate-x-[200%] bg-tertiary-black opacity-0 transition-all duration-500 border-l border-primary-gray",

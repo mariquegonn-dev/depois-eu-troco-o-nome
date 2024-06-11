@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={(cn(inter.className), "bg-secundary-black")}>
         <Header />
-        <div className="max-w-7xl pt-24 mx-auto text-white grid md:grid-cols-[288px_1fr] grid-cols-1">
+        <div className="gap-5 max-w-7xl pt-24 mx-auto text-white grid md:grid-cols-[288px_1fr] grid-cols-1 p-5">
           <SideBar />
           {children}
         </div>

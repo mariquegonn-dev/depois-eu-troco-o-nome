@@ -1,7 +1,7 @@
 import { Nav } from "@/types/nav.type"
 import {
   BookBookmark,
-  BookOpen,
+  Code,
   House,
   WechatLogo,
 } from "@phosphor-icons/react/dist/ssr"
@@ -13,9 +13,9 @@ export const navConfig: Nav[] = [
     Icon: House,
   },
   {
-    title: "Sobre",
-    href: "/#about",
-    Icon: BookOpen,
+    title: "Conhecimentos",
+    href: "/skills",
+    Icon: Code,
   },
   {
     title: "Repositórios",
