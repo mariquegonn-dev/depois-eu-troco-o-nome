@@ -9,7 +9,7 @@ export const Nav = () => {
         {navConfig.map(({ href, title, Icon }) => (
           <li key={title}>
             <Link href={href}>
-              <IconTooltip Icon={Icon} title={title} href={href} />
+              <IconTooltip Icon={Icon} content={title} href={href} />
             </Link>
           </li>
         ))}

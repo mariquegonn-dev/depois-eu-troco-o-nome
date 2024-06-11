@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/tooltip"
 import { Icon } from "@phosphor-icons/react"
 import dynamic from "next/dynamic"
+import { ReactNode } from "react"
 
 const ActiveLink = dynamic(() => import("./active-link"), {
   ssr: false,
@@ -13,11 +14,11 @@ const ActiveLink = dynamic(() => import("./active-link"), {
 
 interface IconTooltipProps {
   Icon: Icon
-  title: string
+  content: ReactNode
   href: string
 }
 
-export const IconTooltip = ({ Icon, title, href }: IconTooltipProps) => {
+export const IconTooltip = ({ Icon, content, href }: IconTooltipProps) => {
   return (
     <TooltipProvider delayDuration={100}>
       <Tooltip>
@@ -27,7 +28,7 @@ export const IconTooltip = ({ Icon, title, href }: IconTooltipProps) => {
         </TooltipTrigger>
 
         <TooltipContent className="border-none bg-primary-gray font-light tracking-wider text-white text-xs">
-          {title}
+          {content}
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
