@@ -15,7 +15,7 @@ export const SkillsSideBar = () => {
       <h1 className="font-medium capitalize">Principais tecnologias</h1>
       <ul className="flex gap-3 items-center">
         {skillsConfig.map(({ icon, description, expertise, title }) => (
-          <li>
+          <li key={`skills-${title}`}>
             <TooltipProvider delayDuration={100}>
               <Tooltip>
                 <TooltipTrigger>

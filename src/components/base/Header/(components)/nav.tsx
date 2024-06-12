@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import { IconTooltip } from "./icon-tooltip"
 import { navConfig } from "@/config/nav.config"

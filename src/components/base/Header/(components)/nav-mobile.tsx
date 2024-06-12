@@ -4,24 +4,18 @@ import { useEffect, useState } from "react"
 import { List, X } from "@phosphor-icons/react/dist/ssr"
 import { cn } from "@/lib/utils"
 import { socialsConfig } from "@/config/socials.config"
-import { useParams, usePathname } from "next/navigation"
-import { navConfig } from "@/config/nav.config"
 import { ListNav } from "../../ListNav/list"
 import { NavHeaderMobile } from "./nav-header-mobile"
+import { ListItemLink } from "./list-item-link"
+import { useParams } from "next/navigation"
 
 export const NavMobile = () => {
-  const [hash, setHash] = useState("")
   const [open, setOpen] = useState(false)
   const params = useParams()
-  const pathname = usePathname()
 
   useEffect(() => {
-    if (open) {
-      const getHash = window.location.hash
-      setHash(getHash)
-      setOpen(false)
-    }
-  }, [params, hash])
+    setOpen(false)
+  }, [params])
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -69,13 +63,7 @@ export const NavMobile = () => {
               👽 Apenas, busquem conhecimento.
             </p>
 
-            <ListNav
-              variant="nav"
-              config={navConfig}
-              onClick={() => {
-                if (pathname === "/") setOpen(false)
-              }}
-            />
+            <ListItemLink />
 
             <ListNav variant="socials" config={socialsConfig} target="_blank" />
 

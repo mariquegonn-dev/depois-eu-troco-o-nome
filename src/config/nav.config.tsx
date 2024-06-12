@@ -1,10 +1,7 @@
+"use client"
+
 import { Nav } from "@/types/nav.type"
-import {
-  BookBookmark,
-  Code,
-  House,
-  WechatLogo,
-} from "@phosphor-icons/react/dist/ssr"
+import { BookBookmark, Code, House, WechatLogo } from "@phosphor-icons/react"
 
 export const navConfig: Nav[] = [
   {

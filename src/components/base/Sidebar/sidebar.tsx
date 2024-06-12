@@ -60,7 +60,10 @@ export const SideBar = () => {
 
       <ul className="flex flex-col gap-2">
         {infoSideBarConfig.map(({ Icon, title, href }) => (
-          <li className="text-primary-white flex gap-2 items-center text-sm">
+          <li
+            className="text-primary-white flex gap-2 items-center text-sm"
+            key={`info-side-bar-${title}`}
+          >
             <Icon size={20} className="text-secundary-gray font-light" />
             {href ? (
               <Link
