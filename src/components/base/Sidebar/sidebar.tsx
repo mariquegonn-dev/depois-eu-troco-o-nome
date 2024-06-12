@@ -54,9 +54,19 @@ export const SideBar = () => {
         </h1>
       </div>
 
-      <p className="text-base text-primary-white font-light">
-        Frontend Developer
-      </p>
+      <div className="flex items-center justify-between">
+        <p className="text-base text-primary-white font-light">
+          Frontend Developer
+        </p>
+
+        <Link
+          href="/contact"
+          className="text-xs text-green-500 bg-green-700/10 hover:bg-green-700/20 px-4 rounded-md py-2 flex items-center gap-2 w-max font-medium tracking-wide"
+        >
+          <span className="w-2 h-2 block bg-green-500 rounded-full"></span>Open
+          to work
+        </Link>
+      </div>
 
       <ul className="flex flex-col gap-2">
         {infoSideBarConfig.map(({ Icon, title, href }) => (

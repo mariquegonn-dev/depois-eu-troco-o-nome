@@ -9,17 +9,11 @@ import { SideBar } from "@/components/base/Sidebar/sidebar"
 import { Skills } from "@/components/base/Skills/Skills"
 import { socialsConfig } from "@/config/socials.config"
 import { technologiesConfig } from "@/config/technologies.config"
-import {
-  FileHtml,
-  FileJs,
-  FileJsx,
-  FileTs,
-  FileTsx,
-} from "@phosphor-icons/react/dist/ssr"
+import { FileTsx } from "@phosphor-icons/react/dist/ssr"
 import Image from "next/image"
 import Link from "next/link"
 
-const repositoriesConfig: RepositorieProps[] = [
+export const repositoriesConfig: RepositorieProps[] = [
   {
     title: "UC Livre",
     about: (
@@ -29,33 +23,62 @@ const repositoriesConfig: RepositorieProps[] = [
       </>
     ),
     Icon: FileTsx,
-    href: "/repositories/lotus-fit-react-javascript-context-api",
     view: "private",
+    image: "/repositories/uclivre.webp",
+    skills: [
+      "react",
+      "typescript",
+      "next",
+      "react-query",
+      "tailwindcss",
+      "react-hook-form",
+    ],
+    href: true,
   },
   {
     title: "NewSun Energy Group",
     about: (
       <>Landing Page da NewSun Energy Group, uma empresa de energia solar.</>
     ),
-    Icon: FileJsx,
-    href: "/repositories/lotus-fit-react-javascript-context-api",
+    Icon: FileTsx,
     view: "private",
+    image: "/repositories/newsun.webp",
+    skills: [
+      "react",
+      "typescript",
+      "next",
+      "react-query",
+      "tailwindcss",
+      "react-hook-form",
+    ],
+    href: true,
   },
   {
     title: "Lotus Fit",
     about:
       "Aplicação web que calcula as calorias diárias necessárias para manter, perder ou ganhar peso.",
     Icon: FileTsx,
-    href: "/repositories/lotus-fit-typescript-redux-toolkit",
     view: "public",
+    image: "/repositories/lotus.webp",
+    skills: ["react", "typescript", "redux-toolkit"],
+    href: true,
   },
   {
-    title: "Blog Pessoal",
+    title: "Ecofunding",
     about:
-      "Uma aplicação pessoal. O Blog é alimentado por arquivos MDX e gerenciado por um CMS.",
+      "Landing page de uma aplicação de financiamento para projetos ecológicos.",
     Icon: FileTsx,
-    href: "/repositories/blog-mdx-cms",
-    view: "public",
+    view: "private",
+    image: "/repositories/ecofunding.webp",
+    skills: [
+      "react",
+      "typescript",
+      "next",
+      "react-query",
+      "tailwindcss",
+      "react-hook-form",
+    ],
+    href: true,
   },
 ]
 
@@ -78,9 +101,15 @@ export default function Home() {
             <p className="text-base text-primary-white">
               Sou desenvolvedor frontend, especialista em <strong>React</strong>{" "}
               e <strong>Typescript</strong>. Aspirante a Fullstack e
-              desenvolvedor de jogos. Amante de trilhas sonoras, ficção
-              científica e pinturas. Pai de três gatinhas lindas, Lulu, Kat e
-              Ges.
+              desenvolvedor de jogos.<br></br>Atualmente estou estudando Analise
+              e Desenvolvimento de Sistemas · 3/5 semestres · porém já atuo na
+              área de desenvolvimento há dois anos.
+            </p>
+
+            <p className="text-base text-primary-white">
+              Amante de trilhas sonoras, ficção científica e pinturas. Pai de
+              três gatinhas lindas: Lulu, Kat e Ges.
+              <br></br>
             </p>
 
             <ListNav variant="main" config={socialsConfig} target="_blank" />
