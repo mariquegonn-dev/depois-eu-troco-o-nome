@@ -1,86 +1,12 @@
 import { ListNav } from "@/components/base/ListNav/list"
-import {
-  RepositorieProps,
-  Repository,
-} from "@/components/base/Repositorie/repository"
-
+import { Repository } from "@/components/base/Repositorie/repository"
 import { Separator } from "@/components/base/Separator/separator"
 import { SideBar } from "@/components/base/Sidebar/sidebar"
 import { Skills } from "@/components/base/Skills/Skills"
+import { repositoriesConfig } from "@/config/repositories.config"
 import { socialsConfig } from "@/config/socials.config"
 import { technologiesConfig } from "@/config/technologies.config"
-import { FileTsx } from "@phosphor-icons/react/dist/ssr"
-import Image from "next/image"
 import Link from "next/link"
-
-export const repositoriesConfig: RepositorieProps[] = [
-  {
-    title: "UC Livre",
-    about: (
-      <>
-        Landing Page e dashboard de uma aplicação de propostas para o mercado de
-        energia.
-      </>
-    ),
-    Icon: FileTsx,
-    view: "private",
-    image: "/repositories/uclivre.webp",
-    skills: [
-      "react",
-      "typescript",
-      "next",
-      "react-query",
-      "tailwindcss",
-      "react-hook-form",
-    ],
-    href: true,
-  },
-  {
-    title: "NewSun Energy Group",
-    about: (
-      <>Landing Page da NewSun Energy Group, uma empresa de energia solar.</>
-    ),
-    Icon: FileTsx,
-    view: "private",
-    image: "/repositories/newsun.webp",
-    skills: [
-      "react",
-      "typescript",
-      "next",
-      "react-query",
-      "tailwindcss",
-      "react-hook-form",
-    ],
-    href: true,
-  },
-  {
-    title: "Lotus Fit",
-    about:
-      "Aplicação web que calcula as calorias diárias necessárias para manter, perder ou ganhar peso.",
-    Icon: FileTsx,
-    view: "public",
-    image: "/repositories/lotus.webp",
-    skills: ["react", "typescript", "redux-toolkit"],
-    href: true,
-  },
-  {
-    title: "Ecofunding",
-    about:
-      "Landing page de uma aplicação de financiamento para projetos ecológicos.",
-    Icon: FileTsx,
-    view: "private",
-    image: "/repositories/ecofunding.webp",
-    skills: [
-      "react",
-      "typescript",
-      "next",
-      "react-query",
-      "tailwindcss",
-      "react-hook-form",
-    ],
-    href: true,
-  },
-]
 
 export default function Home() {
   return (
@@ -121,11 +47,10 @@ export default function Home() {
             Repositórios
           </p>
           <ul className="grid grid-cols-1 lg:grid-cols-2 w-full gap-5">
-            {repositoriesConfig.map(({ Icon, about, href, title, view }) => (
+            {repositoriesConfig.map(({ Icon, about, title, view }) => (
               <Repository
                 Icon={Icon}
                 about={about}
-                href={href}
                 title={title}
                 view={view}
                 key={title}
@@ -139,13 +64,8 @@ export default function Home() {
             Tecnologias e Conhecimentos
           </p>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-5">
-            {technologiesConfig.slice(0, 6).map(({ about, icon, title }) => (
-              <Skills
-                src={<Image src={icon} width={36} height={36} alt={title} />}
-                about={about}
-                title={title}
-                key={title}
-              />
+            {technologiesConfig.slice(0, 6).map(({ about, Icon, title }) => (
+              <Skills Icon={Icon} about={about} title={title} key={title} />
             ))}
           </ul>
         </div>

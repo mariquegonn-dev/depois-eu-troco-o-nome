@@ -1,5 +1,5 @@
 import { Repository } from "@/components/base/Repositorie/repository"
-import { repositoriesConfig } from "../page"
+import { repositoriesConfig } from "@/config/repositories.config"
 
 export default function Repositories() {
   return (
@@ -10,20 +10,16 @@ export default function Repositories() {
         </p>
 
         <ul className="grid grid-cols-1 lg:grid-cols-2 w-full gap-5">
-          {repositoriesConfig.map(
-            ({ Icon, about, href, title, view, image, skills }) => (
-              <Repository
-                Icon={Icon}
-                about={about}
-                href={href}
-                title={title}
-                view={view}
-                key={title}
-                image={image}
-                skills={skills}
-              />
-            )
-          )}
+          {repositoriesConfig.map(({ Icon, about, title, view, image }) => (
+            <Repository
+              key={title}
+              Icon={Icon}
+              about={about}
+              title={title}
+              view={view}
+              image={image}
+            />
+          ))}
         </ul>
       </div>
     </main>

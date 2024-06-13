@@ -1,19 +1,21 @@
+import Image from "next/image"
 import Link from "next/link"
 import { ReactNode } from "react"
 
-export interface RepositorieProps {
+export interface SkillsProps {
   title: string
   about: ReactNode
-  src: ReactNode
+  Icon: string
 }
 
-export const Skills = ({ src, title, about }: RepositorieProps) => {
+export const Skills = ({ title, about, Icon }: SkillsProps) => {
   return (
     <Link
       href="/skills"
       className="border border-primary-gray p-5 rounded-md w-full flex items-center gap-3 hover:bg-primary-gray/30 transition-colors"
     >
-      {src}
+      <Image src={Icon} width={36} height={36} alt={title} />
+
       <div>
         <p className="text-lg capitalize text-primary-white font-medium">
           {title}
