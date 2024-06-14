@@ -42,7 +42,7 @@ export default function SlugPage({ params }: { params: { slug: string } }) {
                     <li key={`${imageIndex}-image-${params.slug}`}>
                       <Image
                         priority
-                        className="rounded-lg"
+                        className="rounded-lg h-[300px] object-cover"
                         width={1000}
                         height={1000}
                         src={image}
