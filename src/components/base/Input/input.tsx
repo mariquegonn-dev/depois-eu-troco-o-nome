@@ -7,7 +7,7 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 
 export const Input = ({ label, id, ...props }: InputProps) => {
   return (
-    <div className="relative w-full -z-20">
+    <div className="relative w-full">
       <input
         {...props}
         id={id}

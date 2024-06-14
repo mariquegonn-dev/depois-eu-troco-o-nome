@@ -3,7 +3,7 @@ import { repositoriesConfig } from "@/config/repositories.config"
 
 export default function Repositories() {
   return (
-    <section className="w-full flex flex-col gap-5 md:mt-0 mt-5">
+    <section className="w-full flex flex-col gap-5">
       <div>
         <p className="mb-2 text-sm font-medium text-secundary-gray tracking-wider capitalize">
           Repositórios

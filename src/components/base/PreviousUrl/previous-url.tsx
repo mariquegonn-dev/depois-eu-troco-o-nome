@@ -8,7 +8,7 @@ export const PreviousUrl = () => {
   return (
     <button
       onClick={() => router.back()}
-      className="w-max py-2 flex items-center gap-1 hover:gap-2 transition-all hover:text-primary-purple font-medium text-secundary-gray"
+      className="w-max flex items-center gap-1 hover:gap-2 transition-all hover:text-primary-purple font-medium text-secundary-gray"
     >
       <ArrowLeft size={20} /> Voltar
     </button>

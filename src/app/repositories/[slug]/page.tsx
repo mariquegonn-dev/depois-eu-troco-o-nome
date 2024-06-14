@@ -30,7 +30,7 @@ export default function SlugPage({ params }: { params: { slug: string } }) {
                 </span>
               </h1>
               <p className="text-secundary-gray font-light">{about}</p>
-              <div className="flex gap-5 items-center">
+              <div className="flex gap-5 items-center relative z-[10]">
                 <Link
                   href={deploy || ""}
                   target="_blank"
