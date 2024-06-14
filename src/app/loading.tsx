@@ -2,7 +2,7 @@ import { Spinner } from "@phosphor-icons/react/dist/ssr"
 
 export default function Loading() {
   return (
-    <div className="absolute left-0 right-0 top-0 bg-primary-black pt-[200px] backdrop-blur-[8px] lg:bottom-0 lg:pt-[400px]">
+    <div className="absolute left-0 right-0 top-0 bg-primary-black pt-[200px] backdrop-blur-[8px] bottom-0 lg:pt-[400px] h-screen">
       <div
         className="mx-auto flex max-w-max items-center gap-1"
         aria-label="loading"

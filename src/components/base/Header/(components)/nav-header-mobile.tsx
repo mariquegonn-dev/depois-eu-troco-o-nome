@@ -9,7 +9,7 @@ export const NavHeaderMobile = ({
     <div className="flex items-center justify-between">
       <div className="flex gap-2 items-center">
         <Image
-          className="w-8 h-8 object-cover rounded-full border-primary-gray border"
+          className="w-8 h-8 object-cover z-[100] rounded-full border-primary-gray border"
           width={32}
           height={32}
           alt="image profile"

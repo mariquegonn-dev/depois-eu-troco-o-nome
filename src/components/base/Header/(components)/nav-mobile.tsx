@@ -47,16 +47,16 @@ export const NavMobile = () => {
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-[1000] bg-black opacity-50"></div>
+        <div className="sm:hidden fixed inset-0 z-[1000] bg-black opacity-50"></div>
       )}
       <nav
         className={cn(
-          "content absolute left-14 rounded-l-xl right-0 top-0 z-[10000] translate-x-[200%] bg-tertiary-black opacity-0 transition-all duration-500 border-l border-primary-gray",
+          "content absolute left-14 rounded-l-xl right-0 top-0 z-[9999] translate-x-[200%] bg-tertiary-black opacity-0 transition-all duration-500 border-l border-primary-gray",
           open && "translate-x-0 opacity-100"
         )}
       >
         {open && (
-          <div className="p-4 flex flex-col gap-3 h-[100dvh]">
+          <div className="p-4 flex sm:hidden flex-col gap-3 h-[100dvh]">
             <NavHeaderMobile onClick={() => setOpen(false)} />
 
             <p className="px-2 text-primary-white text-sm border-b pb-3 border-primary-gray">
