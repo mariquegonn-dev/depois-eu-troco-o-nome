@@ -14,7 +14,7 @@ export const ListItemLink = () => {
       className={cn("flex gap-2 border-b border-primary-gray pb-3 flex-col")}
     >
       {navConfig.map(({ href, title, Icon }) => (
-        <li key={title}>
+        <li key={`${title}-${href}-3`}>
           <Link
             href={href}
             className={cn(

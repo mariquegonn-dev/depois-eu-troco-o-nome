@@ -3,7 +3,7 @@ import { technologiesConfig } from "@/config/technologies.config"
 
 export default function SkillsPage() {
   return (
-    <main className="text-white">
+    <main className="text-white animate-slide-left">
       <p className="mb-2 text-sm font-medium text-secundary-gray tracking-wider">
         Tecnologias e Conhecimentos
       </p>

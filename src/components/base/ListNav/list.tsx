@@ -10,7 +10,6 @@ type ListProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 export const ListNav = ({ config, variant = "nav", ...props }: ListProps) => {
   return (
     <ul
-      role="navigation"
       aria-label={`${variant}-nav-list`}
       className={cn(
         "flex gap-2",
@@ -20,7 +19,7 @@ export const ListNav = ({ config, variant = "nav", ...props }: ListProps) => {
       )}
     >
       {config.map(({ href, title, Icon }) => (
-        <li key={title}>
+        <li key={`${title}-${href}`}>
           <Link
             {...props}
             title={title}

@@ -39,11 +39,12 @@ export const SideBar = () => {
     <div className="flex flex-col gap-5 md:max-w-72">
       <div className="flex flex-row md:flex-col gap-5 items-center md:items-start">
         <Image
-          className="md:w-72 md:h-72 w-32 h-32 rounded-full border-2 border-primary-gray"
+          className="object-cover md:w-72 md:h-72 w-32 h-32 rounded-full border-2 border-primary-gray"
           src="/profile.webp"
-          width={318}
-          height={333.12}
+          width={288}
+          height={288}
           alt="profile-image"
+          priority
         />
 
         <h1 className="text-2xl font-semibold text-primary-white flex flex-col">

@@ -14,7 +14,7 @@ export default function Home() {
       <div className="md:hidden block">
         <SideBar />
       </div>
-      <main className="w-full flex flex-col gap-5 md:mt-0 mt-5">
+      <main className="w-full flex flex-col gap-5 md:mt-0 mt-5 animate-slide-left">
         <div>
           <p className="mb-2 text-sm font-medium text-secundary-gray tracking-wider capitalize">
             Sobre mim
@@ -49,11 +49,11 @@ export default function Home() {
           <ul className="grid grid-cols-1 lg:grid-cols-2 w-full gap-5">
             {repositoriesConfig.map(({ Icon, about, title, view }) => (
               <Repository
+                key={`${title}-repository-home}`}
                 Icon={Icon}
                 about={about}
                 title={title}
                 view={view}
-                key={title}
               />
             ))}
           </ul>
@@ -65,7 +65,12 @@ export default function Home() {
           </p>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-5">
             {technologiesConfig.slice(0, 6).map(({ about, Icon, title }) => (
-              <Skills Icon={Icon} about={about} title={title} key={title} />
+              <Skills
+                Icon={Icon}
+                about={about}
+                title={title}
+                key={`techonologies-home-${title}`}
+              />
             ))}
           </ul>
         </div>

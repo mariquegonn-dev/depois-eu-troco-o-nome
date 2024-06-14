@@ -1,6 +1,6 @@
 import { ReactNode } from "react"
 
-type tecnhologiesItem = {
+export type tecnhologiesItem = {
   title: string
   icon: string
 }

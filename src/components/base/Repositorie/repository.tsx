@@ -45,11 +45,12 @@ export const Repository = ({
 
       {image && (
         <Image
-          className="h-[200px] rounded-b-md"
+          className="h-[200px] object-cover rounded-b-md"
           src={image}
           width={1000}
           height={1000}
           alt="image"
+          priority
         />
       )}
     </Link>

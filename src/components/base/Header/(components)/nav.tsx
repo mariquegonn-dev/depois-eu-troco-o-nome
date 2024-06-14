@@ -9,9 +9,14 @@ export const Nav = () => {
     <nav className="sm:block hidden">
       <ul className="flex items-center gap-3">
         {navConfig.map(({ href, title, Icon }) => (
-          <li key={title}>
+          <li key={`${href}-${title}-1`}>
             <Link href={href}>
-              <IconTooltip Icon={Icon} content={title} href={href} />
+              <IconTooltip
+                Icon={Icon}
+                content={title}
+                href={href}
+                title={title}
+              />
             </Link>
           </li>
         ))}

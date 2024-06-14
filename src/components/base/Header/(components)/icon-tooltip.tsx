@@ -16,13 +16,22 @@ interface IconTooltipProps {
   Icon: Icon
   content: ReactNode
   href: string
+  title: string
 }
 
-export const IconTooltip = ({ Icon, content, href }: IconTooltipProps) => {
+export const IconTooltip = ({
+  Icon,
+  content,
+  href,
+  title,
+}: IconTooltipProps) => {
   return (
     <TooltipProvider delayDuration={100}>
       <Tooltip>
-        <TooltipTrigger className="flex h-8 w-8 items-center justify-center rounded-md border border-primary-gray hover:bg-gray-500/20 relative">
+        <TooltipTrigger
+          className="flex h-8 w-8 items-center justify-center rounded-md border border-primary-gray hover:bg-gray-500/20 relative"
+          aria-label={title}
+        >
           <Icon size={18} className="text-gray-400" />
           <ActiveLink href={href} />
         </TooltipTrigger>

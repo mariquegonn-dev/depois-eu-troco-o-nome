@@ -2,9 +2,10 @@ import { PreviousUrl } from "@/components/base/PreviousUrl/previous-url"
 import { slugRepositoryConfig } from "@/config/slug-repository.config"
 import { newHref } from "@/helpers/new-href"
 import { cn } from "@/lib/utils"
-import { ArrowLeft } from "@phosphor-icons/react/dist/ssr"
 import Image from "next/image"
 import Link from "next/link"
+import { Technologies } from "./(components)/technologies"
+import { LinkRepositories } from "./(components)/link-repositories"
 
 export default function SlugPage({ params }: { params: { slug: string } }) {
   return (
@@ -31,33 +32,16 @@ export default function SlugPage({ params }: { params: { slug: string } }) {
               </h1>
               <p className="text-secundary-gray font-light">{about}</p>
               <div className="flex gap-5 items-center relative z-[10]">
-                <Link
-                  href={deploy || ""}
-                  target="_blank"
-                  className={cn(
-                    "flex max-w-[200px] justify-center items-center gap-2 w-full py-[6px] px-2 text-primary-white/80 hover:text-primary-white hover:bg-primary-black/50 rounded-md border border-primary-gray transition-colors font-medium",
-                    !deploy && "cursor-not-allowed opacity-30 font-normal"
-                  )}
-                >
-                  Live Preview
-                </Link>
-                <Link
-                  href={repository || ""}
-                  target="_blank"
-                  className={cn(
-                    "flex max-w-[200px] justify-center items-center gap-2 w-full py-[6px] px-2 text-primary-white/80 hover:text-primary-white hover:bg-primary-black/50 rounded-md border border-primary-gray transition-colors font-medium",
-                    !repository && "cursor-not-allowed opacity-30 font-normal"
-                  )}
-                >
-                  Repositório
-                </Link>
+                <LinkRepositories label="Live Preview" href={deploy} />
+                <LinkRepositories label="Repositório" href={repository} />
               </div>
 
               <div className="grid xl:grid-cols-[1fr_auto] gap-10 mt-5">
                 <ul className="rounded-lg h-[600px] overflow-y-scroll flex flex-col gap-3 scroll-images-repository pr-1">
                   {images.map((image, imageIndex) => (
-                    <li>
+                    <li key={`${imageIndex}-image-${params.slug}`}>
                       <Image
+                        priority
                         className="rounded-lg"
                         width={1000}
                         height={1000}
@@ -70,96 +54,27 @@ export default function SlugPage({ params }: { params: { slug: string } }) {
                 <div className="flex flex-col gap-5">
                   <h1 className="text-xl font-medium">Tecnologias</h1>
                   {tecnhologies.lang && (
-                    <div className="flex flex-col gap-2">
-                      <h1 className="text-secundary-gray font-medium uppercase tracking-wider">
-                        Linguagem
-                      </h1>
-                      <ul className="flex gap-5 xl:max-w-[400px] flex-wrap">
-                        {tecnhologies.lang.map(({ icon, title }) => (
-                          <li className="border border-primary-gray px-5 py-3 rounded-sm sm:w-[180px] flex items-center gap-2 hover:bg-primary-gray/30 transition-colors">
-                            <Image
-                              src={icon}
-                              width={18}
-                              height={18}
-                              alt={title}
-                            />
-
-                            <p className="text-sm capitalize text-primary-white font-medium">
-                              {title}
-                            </p>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    <Technologies
+                      config={tecnhologies.lang}
+                      label="Linguagem"
+                    />
                   )}
                   {tecnhologies.frontend && (
-                    <div className="flex flex-col gap-2">
-                      <h1 className="text-secundary-gray font-medium uppercase tracking-wider">
-                        Front-end
-                      </h1>
-                      <ul className="flex gap-5 xl:max-w-[400px] flex-wrap">
-                        {tecnhologies.frontend.map(({ icon, title }) => (
-                          <li className="border border-primary-gray px-5 py-3 sm:w-[180px] rounded-sm flex items-center gap-2 hover:bg-primary-gray/30 transition-colors">
-                            <Image
-                              src={icon}
-                              width={18}
-                              height={18}
-                              alt={title}
-                            />
-
-                            <p className="text-sm capitalize text-primary-white font-medium">
-                              {title}
-                            </p>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    <Technologies
+                      config={tecnhologies.frontend}
+                      label="Front-end"
+                    />
                   )}
+
                   {tecnhologies.backend && (
-                    <div className="flex flex-col gap-2">
-                      <h1 className="text-secundary-gray font-medium uppercase tracking-wider">
-                        Back-end
-                      </h1>
-                      <ul className="flex gap-5 xl:max-w-[400px] flex-wrap">
-                        {tecnhologies.backend.map(({ icon, title }) => (
-                          <li className="border border-primary-gray px-5 sm:w-[180px] py-3 rounded-sm flex items-center gap-2 hover:bg-primary-gray/30 transition-colors">
-                            <Image
-                              src={icon}
-                              width={18}
-                              height={18}
-                              alt={title}
-                            />
-
-                            <p className="text-sm capitalize text-primary-white font-medium">
-                              {title}
-                            </p>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    <Technologies
+                      config={tecnhologies.backend}
+                      label="Back-end"
+                    />
                   )}
-                  {tecnhologies.other && (
-                    <div className="flex flex-col gap-2">
-                      <h1 className="text-secundary-gray font-medium uppercase tracking-wider">
-                        Outros
-                      </h1>
-                      <ul className="flex gap-5 xl:max-w-[400px] flex-wrap">
-                        {tecnhologies.other.map(({ icon, title }) => (
-                          <li className="border border-primary-gray px-5 sm:w-[180px] py-3 rounded-sm flex items-center gap-2 hover:bg-primary-gray/30 transition-colors">
-                            <Image
-                              src={icon}
-                              width={18}
-                              height={18}
-                              alt={title}
-                            />
 
-                            <p className="text-sm capitalize text-primary-white font-medium">
-                              {title}
-                            </p>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                  {tecnhologies.other && (
+                    <Technologies config={tecnhologies.other} label="Outros" />
                   )}
                 </div>
               </div>

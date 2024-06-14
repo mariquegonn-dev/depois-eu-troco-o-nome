@@ -5,7 +5,7 @@ import { socialsConfig } from "@/config/socials.config"
 
 export default function Contact() {
   return (
-    <main>
+    <main className="animate-slide-left">
       <p className="mb-2 text-sm font-medium text-secundary-gray tracking-wider capitalize">
         Contato
       </p>
