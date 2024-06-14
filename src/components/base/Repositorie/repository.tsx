@@ -27,7 +27,7 @@ export const Repository = ({
     >
       <div
         className={cn(
-          "p-5 flex flex-col gap-3 h-full",
+          "p-5 flex flex-col gap-3 lg:h-full",
           image ? "pb-0" : "pb-5"
         )}
       >
@@ -45,7 +45,7 @@ export const Repository = ({
 
       {image && (
         <Image
-          className="h-[300px] object-cover rounded-b-md"
+          className="h-[300px] object-cover rounded-b-md lg:flex-1"
           src={image}
           width={1000}
           height={1000}

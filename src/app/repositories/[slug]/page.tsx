@@ -9,7 +9,7 @@ import { LinkRepositories } from "./(components)/link-repositories"
 
 export default function SlugPage({ params }: { params: { slug: string } }) {
   return (
-    <main>
+    <main className="animate-slide-left">
       {slugRepositoryConfig
         .filter(({ title }) => newHref(title) === params.slug)
         .map(
