@@ -1,5 +1,10 @@
 import { Repository } from "@/components/base/Repositorie/repository"
 import { repositoriesConfig } from "@/config/repositories.config"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "MariqueGonn's Portfolio - Repositórios",
+}
 
 export default function Repositories() {
   return (

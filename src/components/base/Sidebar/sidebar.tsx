@@ -1,5 +1,6 @@
 import {
   Envelope,
+  FilePdf,
   GithubLogo,
   LinkedinLogo,
   MapPin,
@@ -31,6 +32,11 @@ const infoSideBarConfig = [
     Icon: WhatsappLogo,
     title: "Whatsapp",
     href: "https://wa.me/5579999199036?text=Ol%C3%A1+Henrique%21",
+  },
+  {
+    Icon: FilePdf,
+    title: "Currículo",
+    href: "/curriculo.pdf",
   },
 ]
 

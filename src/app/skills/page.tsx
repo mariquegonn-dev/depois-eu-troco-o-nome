@@ -1,5 +1,10 @@
 import { Skills } from "@/components/base/Skills/Skills"
 import { technologiesConfig } from "@/config/technologies.config"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "MariqueGonn's Portfolio - Tecnologias",
+}
 
 export default function SkillsPage() {
   return (

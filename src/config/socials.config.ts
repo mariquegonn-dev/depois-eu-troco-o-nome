@@ -2,6 +2,7 @@ import { Nav } from "@/types/nav.type"
 
 import {
   Envelope,
+  FilePdf,
   GithubLogo,
   LinkedinLogo,
   WhatsappLogo,
@@ -27,5 +28,10 @@ export const socialsConfig: Nav[] = [
     title: "Email",
     href: "mailto:mariquegonn@gmail.com",
     Icon: Envelope,
+  },
+  {
+    title: "Currículo",
+    href: "/curriculo.pdf",
+    Icon: FilePdf,
   },
 ]

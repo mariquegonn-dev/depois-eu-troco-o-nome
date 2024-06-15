@@ -1,9 +1,7 @@
 import { PreviousUrl } from "@/components/base/PreviousUrl/previous-url"
 import { slugRepositoryConfig } from "@/config/slug-repository.config"
 import { newHref } from "@/helpers/new-href"
-import { cn } from "@/lib/utils"
 import Image from "next/image"
-import Link from "next/link"
 import { Technologies } from "./(components)/technologies"
 import { LinkRepositories } from "./(components)/link-repositories"
 

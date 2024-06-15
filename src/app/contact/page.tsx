@@ -2,6 +2,11 @@ import { contactFormSubmit } from "@/services/actions"
 import { ContactForm } from "./(components)/contact-form"
 import { ListNav } from "@/components/base/ListNav/list"
 import { socialsConfig } from "@/config/socials.config"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "MariqueGonn's Portfolio - Contato",
+}
 
 export default function Contact() {
   return (
