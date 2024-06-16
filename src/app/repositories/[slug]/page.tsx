@@ -38,12 +38,15 @@ export default function SlugPage({ params }: { params: { slug: string } }) {
               </div>
 
               <div className="grid xl:grid-cols-[1fr_auto] gap-10 mt-5">
-                <ul className="rounded-lg h-[600px] overflow-y-scroll flex flex-col gap-3 scroll-images-repository pr-1">
+                <ul className="rounded-lg w-full xl:h-[600px] overflow-x-scroll xl:overflow-x-hidden xl:overflow-y-scroll flex xl:flex-col gap-10 scroll-images-repository xl:pr-1 pb-1">
                   {images.map((image, imageIndex) => (
-                    <li key={`${imageIndex}-image-${params.slug}`}>
+                    <li
+                      key={`${imageIndex}-image-${params.slug}`}
+                      className="flex-none"
+                    >
                       <Image
                         priority
-                        className="rounded-lg h-[300px] object-cover"
+                        className="w-[500px] xl:w-max rounded-lg h-[300px] object-cover"
                         width={1000}
                         height={1000}
                         src={image}

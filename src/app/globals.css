@@ -77,6 +77,7 @@
 
 .scroll-images-repository::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 
 .scroll-images-repository::-webkit-scrollbar-track {
