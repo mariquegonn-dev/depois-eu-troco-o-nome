@@ -33,7 +33,7 @@ export const slugRepositoryConfig: SlugRepository[] = [
     deploy: "https://uclivre.com.br/",
     images: ["/repositories/uclivre.webp", "/repositories/uclivre-2.webp"],
     tecnhologies: {
-      lang: [{ title: "Typescript", icon: "/tecnologias/ts.webp" }],
+      lang: [{ title: "Typescript", icon: "/tecnologias/ts.svg" }],
       frontend: [
         { title: "React", icon: "/tecnologias/react.svg" },
         { title: "Next", icon: "/tecnologias/next.webp" },
@@ -57,7 +57,7 @@ export const slugRepositoryConfig: SlugRepository[] = [
     deploy: "https://www.newsun.energy/",
     images: ["/repositories/newsun.webp", "/repositories/newsun-2.webp"],
     tecnhologies: {
-      lang: [{ title: "Typescript", icon: "/tecnologias/ts.webp" }],
+      lang: [{ title: "Typescript", icon: "/tecnologias/ts.svg" }],
       frontend: [
         { title: "React", icon: "/tecnologias/react.svg" },
         { title: "Next", icon: "/tecnologias/next.webp" },
@@ -83,7 +83,7 @@ export const slugRepositoryConfig: SlugRepository[] = [
     view: "public",
     deploy: "https://lotusfit.netlify.app/",
     repository: "https://github.com/mariquegonn-dev/lotus-ts",
-    images: ["/repositories/lotus.webp", "/repositories/lotus-2.webp"],
+    images: ["/repositories/lotus.webp", "/repositories/lotus-2.svg"],
     tecnhologies: {
       lang: [{ title: "Typescript", icon: "/tecnologias/ts.svg" }],
       frontend: [
