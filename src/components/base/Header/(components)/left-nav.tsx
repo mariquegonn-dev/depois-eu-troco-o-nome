@@ -12,7 +12,7 @@ export const LeftNav = () => {
       >
         <GithubLogo size={18} className="text-white" weight="fill" />
       </Link>
-      <Link className="text-sm font-medium" href="/">
+      <Link className="text-sm font-medium hover:text-primary-purple" href="/">
         mariquegonn
       </Link>
     </div>

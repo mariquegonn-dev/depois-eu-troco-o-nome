@@ -114,7 +114,7 @@ export const SideBar = () => {
       <div className="flex flex-col gap-5">
         <h1 className="font-medium capitalize">Organização Atual</h1>
         <Link
-          className="flex items-center gap-2 w-max"
+          className="flex items-center gap-2 w-max hover:text-primary-purple"
           href="https://www.linkedin.com/company/newsun-energy-group/"
           target="_blank"
         >
