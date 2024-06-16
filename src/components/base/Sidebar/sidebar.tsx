@@ -91,6 +91,7 @@ export const SideBar = () => {
             <Icon size={20} className="text-secundary-gray font-light" />
             {href ? (
               <Link
+                rel={title === "Currículo" ? 'noopener noreferrer' : ''}
                 download={title === "Currículo" ? true : false}
                 target="_blank"
                 href={href}
