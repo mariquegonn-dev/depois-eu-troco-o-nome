@@ -1,4 +1,4 @@
-import { RepositoryProps } from "@/components/base/Repositorie/repository"
+import { RepositoryProps } from "@/components/base/Repository/repository"
 import { FileTsx } from "@phosphor-icons/react/dist/ssr"
 
 export const repositoriesConfig: RepositoryProps[] = [

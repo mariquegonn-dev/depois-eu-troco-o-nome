@@ -3,6 +3,8 @@ import { ContactForm } from "./(components)/contact-form"
 import { ListNav } from "@/components/base/ListNav/list"
 import { socialsConfig } from "@/config/socials.config"
 import { Metadata } from "next"
+import { Text } from "@/components/base/Text/text"
+import { Section } from "@/components/base/Main/main"
 
 export const metadata: Metadata = {
   title: "MariqueGonn's Portfolio - Contato",
@@ -10,15 +12,19 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <main className="animate-slide-left">
-      <p className="mb-2 text-sm font-medium text-secundary-gray tracking-wider capitalize">
+    <Section>
+      <Text type="h1" variant="title-page">
         Contato
-      </p>
+      </Text>
+
       <ContactForm formAction={contactFormSubmit} />
-      <div className="flex flex-col justify-center items-center gap-5 mt-5">
-        <p className="text-secundary-gray">ou</p>
+
+      <div className="flex flex-col justify-center items-center gap-5 mt-3">
+        <Text type="span" className="text-secundary-gray">
+          ou
+        </Text>
         <ListNav variant="main" config={socialsConfig} target="_blank" />
       </div>
-    </main>
+    </Section>
   )
 }

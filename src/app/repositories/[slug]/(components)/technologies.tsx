@@ -1,3 +1,4 @@
+import { Text } from "@/components/base/Text/text"
 import { tecnhologiesItem } from "@/config/slug-repository.config"
 import Image from "next/image"
 
@@ -9,9 +10,12 @@ interface TechnologiesProps {
 export const Technologies = ({ label, config }: TechnologiesProps) => {
   return (
     <div className="flex flex-col gap-2">
-      <h1 className="text-secundary-gray font-medium uppercase tracking-wider">
+      <Text
+        type="h1"
+        className="text-secundary-gray font-medium uppercase tracking-wider"
+      >
         {label}
-      </h1>
+      </Text>
       <ul className="flex gap-5 xl:max-w-[400px] flex-wrap">
         {config.map(({ icon, title }) => (
           <li
@@ -20,9 +24,12 @@ export const Technologies = ({ label, config }: TechnologiesProps) => {
           >
             <Image src={icon} width={18} height={18} alt={title} />
 
-            <p className="text-sm capitalize text-primary-white font-medium">
+            <Text
+              type="h2"
+              className="text-sm capitalize text-primary-white font-medium"
+            >
               {title}
-            </p>
+            </Text>
           </li>
         ))}
       </ul>

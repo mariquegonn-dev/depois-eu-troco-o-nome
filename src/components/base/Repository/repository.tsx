@@ -4,13 +4,15 @@ import { Icon } from "@phosphor-icons/react"
 import Image from "next/image"
 import Link from "next/link"
 import { ReactNode } from "react"
+import { View } from "../View/view"
+import { Text } from "../Text/text"
 
 export interface RepositoryProps {
   Icon: Icon
   title: string
   view?: "public" | "private"
   about: ReactNode
-  image?: string
+  image?: string | null
 }
 
 export const Repository = ({
@@ -31,16 +33,18 @@ export const Repository = ({
           image ? "pb-0" : "pb-5"
         )}
       >
-        <p className="flex items-center gap-2 text-sm text-primary-white">
+        <Text
+          type="h2"
+          variant="title-page"
+          className="flex items-center gap-2"
+        >
           <Icon className="text-secundary-gray" size={24} />
-          <span className="underline">{title}</span>{" "}
-          {view && (
-            <span className="capitalize text-xs text-secundary-gray border border-primary-gray px-2 py-[2px] rounded-full">
-              {view}
-            </span>
-          )}
-        </p>
-        <p className="text-xs text-secundary-gray leading-[150%]">{about}</p>
+          <span className="underline">{title}</span>
+          {view && <View>{view}</View>}
+        </Text>
+        <Text type="p" className="text-xs text-secundary-gray leading-[150%]">
+          {about}
+        </Text>
       </div>
 
       {image && (

@@ -4,10 +4,13 @@ import { newHref } from "@/helpers/new-href"
 import Image from "next/image"
 import { Technologies } from "./(components)/technologies"
 import { LinkRepositories } from "./(components)/link-repositories"
+import { Section } from "@/components/base/Main/main"
+import { Text } from "@/components/base/Text/text"
+import { View } from "@/components/base/View/view"
 
 export default function SlugPage({ params }: { params: { slug: string } }) {
   return (
-    <main className="animate-slide-left">
+    <Section>
       {slugRepositoryConfig
         .filter(({ title }) => newHref(title) === params.slug)
         .map(
@@ -22,13 +25,13 @@ export default function SlugPage({ params }: { params: { slug: string } }) {
           }) => (
             <div className="flex flex-col gap-3">
               <PreviousUrl />
-              <h1 className="flex items-center gap-3 text-xl font-medium">
+              <Text type="h1" variant="xl" className="flex items-center gap-3">
                 {title}
-                <span className="capitalize text-xs text-secundary-gray border border-primary-gray px-2 py-[2px] rounded-full cursor-default">
-                  {view}
-                </span>
-              </h1>
-              <p className="text-secundary-gray font-light">{about}</p>
+                <View>{view}</View>
+              </Text>
+              <Text type="p" className="text-secundary-gray font-light">
+                {about}
+              </Text>
               <div className="flex gap-5 items-center relative z-[10]">
                 <LinkRepositories label="Live Preview" href={deploy} />
                 <LinkRepositories label="Repositório" href={repository} />
@@ -50,7 +53,10 @@ export default function SlugPage({ params }: { params: { slug: string } }) {
                   ))}
                 </ul>
                 <div className="flex flex-col gap-5">
-                  <h1 className="text-xl font-medium">Tecnologias</h1>
+                  <Text type="h1" variant="xl">
+                    Tecnologias
+                  </Text>
+
                   {tecnhologies.lang && (
                     <Technologies
                       config={tecnhologies.lang}
@@ -79,6 +85,6 @@ export default function SlugPage({ params }: { params: { slug: string } }) {
             </div>
           )
         )}
-    </main>
+    </Section>
   )
 }

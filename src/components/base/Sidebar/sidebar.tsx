@@ -10,6 +10,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { SkillsSideBar } from "./(components)/skills-side-bar"
 import { Separator } from "../Separator/separator"
+import { Text } from "../Text/text"
 
 const infoSideBarConfig = [
   { Icon: MapPin, title: "Aracaju/SE - Brazil" },
@@ -53,18 +54,24 @@ export const SideBar = () => {
           priority
         />
 
-        <h1 className="text-2xl font-semibold text-primary-white flex flex-col">
+        <Text
+          type="h1"
+          className="text-2xl font-semibold text-primary-white flex flex-col"
+        >
           Henrique Gonçalves
-          <span className="text-xl text-secundary-gray lowercase font-light">
+          <Text
+            type="span"
+            className="text-xl text-secundary-gray lowercase font-light"
+          >
             MariqueGonn
-          </span>
-        </h1>
+          </Text>
+        </Text>
       </div>
 
       <div className="flex items-center justify-between">
-        <p className="text-base text-primary-white font-light">
+        <Text type="h1" className="text-base text-primary-white font-light">
           Frontend Developer
-        </p>
+        </Text>
 
         <Link
           href="/contact"
@@ -79,11 +86,12 @@ export const SideBar = () => {
         {infoSideBarConfig.map(({ Icon, title, href }) => (
           <li
             className="text-primary-white flex gap-2 items-center text-sm"
-            key={`info-side-bar-${title}`}
+            key={`info-side-bar-${title}-22`}
           >
             <Icon size={20} className="text-secundary-gray font-light" />
             {href ? (
               <Link
+                download={title === "Currículo" ? true : false}
                 target="_blank"
                 href={href}
                 className="underline hover:text-primary-purple"

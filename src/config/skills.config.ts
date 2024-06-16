@@ -1,38 +1,38 @@
 import { SkillsProps } from "@/components/base/Skills/Skills"
 
-export const technologiesConfig: SkillsProps[] = [
+export const skillsConfig: SkillsProps[] = [
   {
-    Icon: "/tecnologias/html.webp",
+    Icon: "/tecnologias/html.svg",
     title: "HTML5",
     about: "Front-end",
   },
   {
-    Icon: "/tecnologias/css.webp",
+    Icon: "/tecnologias/css.svg",
     title: "CSS",
     about: "Front-end",
   },
   {
-    Icon: "/tecnologias/js.webp",
+    Icon: "/tecnologias/js.svg",
     title: "Javascript",
     about: "Linguagem",
   },
   {
-    Icon: "/tecnologias/ts.webp",
+    Icon: "/tecnologias/ts.svg",
     title: "Typescript",
     about: "Linguagem",
   },
   {
-    Icon: "/tecnologias/react.webp",
+    Icon: "/tecnologias/react.svg",
     title: "React",
     about: "Front-end",
   },
   {
-    Icon: "/tecnologias/tailwind.webp",
+    Icon: "/tecnologias/tailwind.svg",
     title: "Tailwind",
     about: "Front-end",
   },
   {
-    Icon: "/tecnologias/bootstrap.webp",
+    Icon: "/tecnologias/bootstrap.svg",
     title: "Bootstrap",
     about: "Front-end",
   },
@@ -62,7 +62,7 @@ export const technologiesConfig: SkillsProps[] = [
     about: "Back-end",
   },
   {
-    Icon: "/tecnologias/prisma.webp",
+    Icon: "/tecnologias/prisma.svg",
     title: "Prisma",
     about: "Back-end",
   },
@@ -72,13 +72,18 @@ export const technologiesConfig: SkillsProps[] = [
     about: "Fullstack",
   },
   {
-    Icon: "/tecnologias/git.webp",
+    Icon: "/tecnologias/git.svg",
     title: "Git",
     about: "CI/CD",
   },
   {
-    Icon: "/tecnologias/jest.webp",
+    Icon: "/tecnologias/jest.svg",
     title: "Jest",
     about: "Teste",
+  },
+  {
+    Icon: "/tecnologias/figma.svg",
+    title: "Figma",
+    about: "Outros",
   },
 ]

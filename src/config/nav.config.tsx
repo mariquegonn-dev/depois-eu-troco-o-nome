@@ -10,7 +10,7 @@ export const navConfig: Nav[] = [
     Icon: House,
   },
   {
-    title: "Conhecimentos",
+    title: "Habilidades",
     href: "/skills",
     Icon: Code,
   },
