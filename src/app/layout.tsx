@@ -47,7 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={(cn(inter.className), "bg-secundary-black")}>
+      <body
+        className={(cn(inter.className), "bg-secundary-black scroll-smooth")}
+      >
         <Header />
         <div className="gap-5 max-w-7xl pt-24 mx-auto text-white grid md:grid-cols-[288px_1fr] grid-cols-1 p-5">
           <div className="md:block hidden">
