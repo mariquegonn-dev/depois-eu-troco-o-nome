@@ -83,7 +83,7 @@ export const slugRepositoryConfig: SlugRepository[] = [
     view: "public",
     deploy: "https://lotusfit.netlify.app/",
     repository: "https://github.com/mariquegonn-dev/lotus-ts",
-    images: ["/repositories/lotus.webp", "/repositories/lotus-2.svg"],
+    images: ["/repositories/lotus.webp", "/repositories/lotus-2.webp"],
     tecnhologies: {
       lang: [{ title: "Typescript", icon: "/tecnologias/ts.svg" }],
       frontend: [
