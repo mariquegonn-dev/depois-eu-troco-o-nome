@@ -31,12 +31,7 @@ export const slugRepositoryConfig: SlugRepository[] = [
     ),
     view: "private",
     deploy: "https://uclivre.com.br/",
-    images: [
-      "/repositories/uclivre.webp",
-      "/repositories/newsun.webp",
-      "/repositories/lotus.webp",
-      "/repositories/ecofunding.webp",
-    ],
+    images: ["/repositories/uclivre.webp", "/repositories/uclivre-2.webp"],
     tecnhologies: {
       lang: [{ title: "Typescript", icon: "/tecnologias/ts.webp" }],
       frontend: [
@@ -60,12 +55,7 @@ export const slugRepositoryConfig: SlugRepository[] = [
     ),
     view: "private",
     deploy: "https://www.newsun.energy/",
-    images: [
-      "/repositories/newsun.webp",
-      "/repositories/uclivre.webp",
-      "/repositories/lotus.webp",
-      "/repositories/ecofunding.webp",
-    ],
+    images: ["/repositories/newsun.webp", "/repositories/newsun-2.webp"],
     tecnhologies: {
       lang: [{ title: "Typescript", icon: "/tecnologias/ts.webp" }],
       frontend: [
@@ -93,12 +83,7 @@ export const slugRepositoryConfig: SlugRepository[] = [
     view: "public",
     deploy: "https://lotusfit.netlify.app/",
     repository: "https://github.com/mariquegonn-dev/lotus-ts",
-    images: [
-      "/repositories/lotus.webp",
-      "/repositories/newsun.webp",
-      "/repositories/uclivre.webp",
-      "/repositories/ecofunding.webp",
-    ],
+    images: ["/repositories/lotus.webp", "/repositories/lotus-2.webp"],
     tecnhologies: {
       lang: [{ title: "Typescript", icon: "/tecnologias/ts.webp" }],
       frontend: [
@@ -124,9 +109,7 @@ export const slugRepositoryConfig: SlugRepository[] = [
     deploy: "https://ecofunding.com.br/",
     images: [
       "/repositories/ecofunding.webp",
-      "/repositories/lotus.webp",
-      "/repositories/newsun.webp",
-      "/repositories/uclivre.webp",
+      "/repositories/ecofunding-2.webp",
     ],
     tecnhologies: {
       lang: [{ title: "Typescript", icon: "/tecnologias/ts.webp" }],

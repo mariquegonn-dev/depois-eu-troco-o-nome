@@ -46,7 +46,7 @@ export default function SlugPage({ params }: { params: { slug: string } }) {
                     >
                       <Image
                         priority
-                        className="w-[500px] xl:w-max rounded-lg h-[300px] object-cover"
+                        className="w-[500px] xl:w-full rounded-lg h-[400px] object-cover"
                         width={1000}
                         height={1000}
                         src={image}
