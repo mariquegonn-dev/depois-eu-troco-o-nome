@@ -37,7 +37,7 @@ const infoSideBarConfig = [
   {
     Icon: FilePdf,
     title: "Currículo",
-    href: "/curriculo.pdf",
+    href: "https://drive.google.com/file/d/1SfnViTGtCH6KigRyK6gYJgEpZ3tPlW5w/view",
   },
 ]
 
@@ -91,8 +91,6 @@ export const SideBar = () => {
             <Icon size={20} className="text-secundary-gray font-light" />
             {href ? (
               <Link
-                rel={title === "Currículo" ? 'noopener noreferrer' : ''}
-                download={title === "Currículo" ? true : false}
                 target="_blank"
                 href={href}
                 className="underline hover:text-primary-purple"

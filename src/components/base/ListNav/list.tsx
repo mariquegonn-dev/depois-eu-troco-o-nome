@@ -21,8 +21,6 @@ export const ListNav = ({ config, variant = "nav", ...props }: ListProps) => {
       {config.map(({ href, title, Icon }) => (
         <li key={`${title}-${href}-10`}>
           <Link
-            rel={title === "Currículo" ? "noopener noreferrer" : ""}
-            download={title === "Currículo" ? true : false}
             {...props}
             title={title}
             href={href}

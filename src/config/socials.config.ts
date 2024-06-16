@@ -31,7 +31,7 @@ export const socialsConfig: Nav[] = [
   },
   {
     title: "Currículo",
-    href: "/curriculo.pdf",
+    href: "https://drive.google.com/file/d/1SfnViTGtCH6KigRyK6gYJgEpZ3tPlW5w/view",
     Icon: FilePdf,
   },
 ]
