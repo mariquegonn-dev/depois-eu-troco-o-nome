@@ -35,16 +35,16 @@ export const slugRepositoryConfig: SlugRepository[] = [
     tecnhologies: {
       lang: [{ title: "Typescript", icon: "/tecnologias/ts.webp" }],
       frontend: [
-        { title: "React", icon: "/tecnologias/react.webp" },
+        { title: "React", icon: "/tecnologias/react.svg" },
         { title: "Next", icon: "/tecnologias/next.webp" },
-        { title: "Tailwind", icon: "/tecnologias/tailwind.webp" },
+        { title: "Tailwind", icon: "/tecnologias/tailwind.svg" },
         { title: "React Hook Form", icon: "/tecnologias/hook-form.webp" },
         { title: "Zod", icon: "/tecnologias/zod.webp" },
         { title: "Zustand", icon: "/tecnologias/zustand.png" },
       ],
       other: [
-        { title: "Jest", icon: "/tecnologias/jest.webp" },
-        { title: "Git", icon: "/tecnologias/git.webp" },
+        { title: "Jest", icon: "/tecnologias/jest.svg" },
+        { title: "Git", icon: "/tecnologias/git.svg" },
       ],
     },
   },
@@ -59,16 +59,16 @@ export const slugRepositoryConfig: SlugRepository[] = [
     tecnhologies: {
       lang: [{ title: "Typescript", icon: "/tecnologias/ts.webp" }],
       frontend: [
-        { title: "React", icon: "/tecnologias/react.webp" },
+        { title: "React", icon: "/tecnologias/react.svg" },
         { title: "Next", icon: "/tecnologias/next.webp" },
-        { title: "Tailwind", icon: "/tecnologias/tailwind.webp" },
+        { title: "Tailwind", icon: "/tecnologias/tailwind.svg" },
         { title: "React Hook Form", icon: "/tecnologias/hook-form.webp" },
         { title: "Zod", icon: "/tecnologias/zod.webp" },
         { title: "Zustand", icon: "/tecnologias/zustand.png" },
       ],
       other: [
-        { title: "Jest", icon: "/tecnologias/jest.webp" },
-        { title: "Git", icon: "/tecnologias/git.webp" },
+        { title: "Jest", icon: "/tecnologias/jest.svg" },
+        { title: "Git", icon: "/tecnologias/git.svg" },
       ],
     },
   },
@@ -85,15 +85,15 @@ export const slugRepositoryConfig: SlugRepository[] = [
     repository: "https://github.com/mariquegonn-dev/lotus-ts",
     images: ["/repositories/lotus.webp", "/repositories/lotus-2.webp"],
     tecnhologies: {
-      lang: [{ title: "Typescript", icon: "/tecnologias/ts.webp" }],
+      lang: [{ title: "Typescript", icon: "/tecnologias/ts.svg" }],
       frontend: [
-        { title: "React", icon: "/tecnologias/react.webp" },
+        { title: "React", icon: "/tecnologias/react.svg" },
         { title: "Vite", icon: "/tecnologias/vite.svg" },
-        { title: "CSS", icon: "/tecnologias/css.webp" },
+        { title: "CSS", icon: "/tecnologias/css.svg" },
         { title: "Redux", icon: "/tecnologias/redux.svg" },
       ],
       other: [
-        { title: "Git", icon: "/tecnologias/git.webp" },
+        { title: "Git", icon: "/tecnologias/git.svg" },
         { title: "Figma", icon: "/tecnologias/figma.svg" },
       ],
     },
@@ -112,16 +112,16 @@ export const slugRepositoryConfig: SlugRepository[] = [
       "/repositories/ecofunding-2.webp",
     ],
     tecnhologies: {
-      lang: [{ title: "Typescript", icon: "/tecnologias/ts.webp" }],
+      lang: [{ title: "Typescript", icon: "/tecnologias/ts.svg" }],
       frontend: [
-        { title: "React", icon: "/tecnologias/react.webp" },
+        { title: "React", icon: "/tecnologias/react.svg" },
         { title: "Next", icon: "/tecnologias/next.webp" },
-        { title: "Tailwind", icon: "/tecnologias/tailwind.webp" },
+        { title: "Tailwind", icon: "/tecnologias/tailwind.svg" },
         { title: "React Hook Form", icon: "/tecnologias/hook-form.webp" },
         { title: "Zod", icon: "/tecnologias/zod.webp" },
         { title: "Zustand", icon: "/tecnologias/zustand.png" },
       ],
-      other: [{ title: "Git", icon: "/tecnologias/git.webp" }],
+      other: [{ title: "Git", icon: "/tecnologias/git.svg" }],
     },
   },
 ]
