@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# 📋 Meu Portfolio
 
-First, run the development server:
+Portfolio feito com Next.JS 14. A ideia é que, ao navegar pelo portfolio, o usuário se sinta navegando dentro do próprio github.
+
+
+# 💻 Visualizando o projeto 
+
+![FIGMA Apresentação](https://github.com/mariquegonn-dev/depois-eu-troco-o-nome/blob/development/public/opengraph.png?raw=true)
+
+
+# 🏷️ Etiquetas
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
+
+# ✍🏻 Como instalar
+
+Clone o projeto, utilizando o terminal:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/mariquegonn-dev/portfolio-next-14
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Em seguida:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Para rodar o projeto:
 
-## Learn More
+```bash
+  npm run dev
+```
+    
+# 🎆 Deploy
 
-To learn more about Next.js, take a look at the following resources:
+Para acessar o deploy: [mariquegonn.live](https://www.mariquegonn.live/) ou [mariquegonn.me](https://www.mariquegonn.me/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+# 👨🏻‍💻Autores e Agradecimentos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [mariquegonn-dev](https://www.github.com/mariquegonn-dev)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Obrigado por ter chegado até aqui! 
+
+Esse projeto foi feito com carinho e atenção, mas acima disso, com profissionalidade. Espero que tenha gostado, e caso tenha interesse, olhe meus outros projetos, ou me mande uma mensagem no [linkedin](https://www.linkedin.com/in/mariquegonn-dev) ou [whatsapp](https://wa.me/557999199036?text=Ol%C3%A1+Henrique%21v).
+
+
