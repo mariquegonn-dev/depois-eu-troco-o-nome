@@ -22,6 +22,34 @@ export interface SlugRepository {
 
 export const slugRepositoryConfig: SlugRepository[] = [
   {
+    title: "Este Portfolio",
+    about: (
+      <>Portfolio desenvolvido com Next.js, TailwindCSS e Clean Architeture.</>
+    ),
+    view: "public",
+    repository: "https://github.com/mariquegonn-dev/portfolio-next-14",
+    deploy: "https://www.mariquegonn.live/",
+    images: [
+      "/repositories/este-portfolio.webp",
+      "/repositories/este-portfolio-2.webp",
+    ],
+    tecnhologies: {
+      lang: [{ title: "Typescript", icon: "/tecnologias/ts.svg" }],
+      frontend: [
+        { title: "React", icon: "/tecnologias/react.svg" },
+        { title: "Next", icon: "/tecnologias/next.webp" },
+        { title: "Tailwind", icon: "/tecnologias/tailwind.svg" },
+        { title: "React Hook Form", icon: "/tecnologias/hook-form.webp" },
+        { title: "Zod", icon: "/tecnologias/zod.webp" },
+        { title: "Zustand", icon: "/tecnologias/zustand.png" },
+      ],
+      other: [
+        { title: "Jest", icon: "/tecnologias/jest.svg" },
+        { title: "Git", icon: "/tecnologias/git.svg" },
+      ],
+    },
+  },
+  {
     title: "UC Livre",
     about: (
       <>
@@ -122,6 +150,39 @@ export const slugRepositoryConfig: SlugRepository[] = [
         { title: "Zustand", icon: "/tecnologias/zustand.png" },
       ],
       other: [{ title: "Git", icon: "/tecnologias/git.svg" }],
+    },
+  },
+  {
+    title: "Mr8 Cursos",
+    about: <>Site institucional de um curso preparatório para IFBA e ENEM.</>,
+    view: "public",
+    deploy: "https://mr8-next.vercel.app/",
+    repository: "https://github.com/mariquegonn-dev/mr8-next",
+    images: ["/repositories/mr8.webp", "/repositories/mr8-2.webp"],
+    tecnhologies: {
+      lang: [{ title: "Typescript", icon: "/tecnologias/ts.svg" }],
+      frontend: [
+        { title: "React", icon: "/tecnologias/react.svg" },
+        { title: "Next", icon: "/tecnologias/next.webp" },
+        { title: "Tailwind", icon: "/tecnologias/tailwind.svg" },
+        { title: "React Hook Form", icon: "/tecnologias/hook-form.webp" },
+        { title: "Zod", icon: "/tecnologias/zod.webp" },
+        { title: "Zustand", icon: "/tecnologias/zustand.png" },
+      ],
+      backend: [
+        {
+          title: "NodeJS",
+          icon: "/tecnologias/node.webp",
+        },
+        {
+          title: "ExpressJS",
+          icon: "/tecnologias/express.svg",
+        },
+      ],
+      other: [
+        { title: "Jest", icon: "/tecnologias/jest.svg" },
+        { title: "Git", icon: "/tecnologias/git.svg" },
+      ],
     },
   },
 ]

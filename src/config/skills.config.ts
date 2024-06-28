@@ -52,6 +52,11 @@ export const skillsConfig: SkillsProps[] = [
     about: "Front-end",
   },
   {
+    Icon: "/tecnologias/vite.svg",
+    title: "Vite",
+    about: "Front-end",
+  },
+  {
     Icon: "/tecnologias/next.webp",
     title: "NextJS",
     about: "Fullstack",
@@ -59,6 +64,16 @@ export const skillsConfig: SkillsProps[] = [
   {
     Icon: "/tecnologias/node.webp",
     title: "NodeJS",
+    about: "Back-end",
+  },
+  {
+    Icon: "/tecnologias/express.svg",
+    title: "ExpressJS",
+    about: "Back-end",
+  },
+  {
+    Icon: "/tecnologias/nest.svg",
+    title: "Nest",
     about: "Back-end",
   },
   {
@@ -72,8 +87,23 @@ export const skillsConfig: SkillsProps[] = [
     about: "Fullstack",
   },
   {
+    Icon: "/tecnologias/redux.svg",
+    title: "Redux",
+    about: "Front-end",
+  },
+  {
+    Icon: "/tecnologias/zustand.png",
+    title: "Zustand",
+    about: "Front-end",
+  },
+  {
     Icon: "/tecnologias/git.svg",
     title: "Git",
+    about: "CI/CD",
+  },
+  {
+    Icon: "/tecnologias/docker.svg",
+    title: "Docker",
     about: "CI/CD",
   },
   {
@@ -84,6 +114,11 @@ export const skillsConfig: SkillsProps[] = [
   {
     Icon: "/tecnologias/figma.svg",
     title: "Figma",
+    about: "Outros",
+  },
+  {
+    Icon: "/tecnologias/storybook.svg",
+    title: "Storybook",
     about: "Outros",
   },
 ]

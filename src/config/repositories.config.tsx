@@ -3,6 +3,22 @@ import { FileTsx } from "@phosphor-icons/react/dist/ssr"
 
 export const repositoriesConfig: RepositoryProps[] = [
   {
+    title: "Este portfolio",
+    about: (
+      <>Portfolio desenvolvido com Next.js, TailwindCSS e Clean Architeture.</>
+    ),
+    Icon: FileTsx,
+    view: "public",
+    image: "/repositories/este-portfolio.webp",
+  },
+  {
+    title: "Mr8 Cursos",
+    about: <>Site institucional de um curso preparatório para IFBA e ENEM.</>,
+    Icon: FileTsx,
+    view: "public",
+    image: "/repositories/mr8.webp",
+  },
+  {
     title: "UC Livre",
     about: (
       <>
